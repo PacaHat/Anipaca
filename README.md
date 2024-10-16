@@ -21,16 +21,22 @@ xen sama welcome 🤗
 * This's an **Educational** Project.
 * I am **NOT** promoting the use of free anime websites by any means.
 * Open Source :)
-
-
-  <p align="center">
-    Demo <a href="https://anikatsu.me">https://anikatsu.me</a> <br>
-    This is a PHP application used for browsing, searching and watching anime . The application is built on top of GogoAnimeAPI (<a href="https://github.com/shashankktiwariii/anikatsu-api">API REPO</a>)
-  </p>
+<p align="center">
+  <h1 align="center">Anime Application</h1>
+  Demo: <a href="http://pgtl.byethost24.com/">http://anipaca.com/</a> <br>
+  This is a PHP application used for browsing, searching, and watching anime. The application is built on top of GogoAnimeAPI. 
 </p>
 
+<p align="center">
+  <a href="https://github.com/PacaHat/anime-api.git">
+    <img src="https://img.shields.io/badge/Visit%20API%20Repo-blue?style=for-the-badge" alt="API Repo">
+  </a>
+</p>
+
+ 
+
 <!-- PREVIEW IMAGE -->
-<img src="https://anikatsu.me/banner.png">
+<img src="http://pgtl.byethost24.com/banner.png">
 
 <hr/>
 
