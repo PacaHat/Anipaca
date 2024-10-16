@@ -1,6 +1,3 @@
-<h1>xen sama welcome 🤗</h1>
-
-
 <p align="center">
   <div align="center">
     <a href="http://pgtl.byethost24.com/">
@@ -33,11 +30,13 @@
   </a>
 </p>
 
- 
+## Screenshots Ddesktop 🖥 
 
-<!-- PREVIEW IMAGE -->
-<img src="http://pgtl.byethost24.com/banner.png">
-
+<p align="center">
+  <img src="" alt="files/images/landing page.png" width="300" />
+  <img src="" alt="files/images/Homepage.png" width="300" />
+  <img src="" alt="files/images/player.png" width="300" />
+</p>
 <hr/>
 
 ## Features 
