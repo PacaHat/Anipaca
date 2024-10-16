@@ -1,0 +1,17 @@
+{
+    "short_name": "AniKatsu",
+    "name": "AniKatsu",
+    "icons": [
+        {
+            "src": "./anikatsu.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/home?source=pwa",
+    "background_color": "#000",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#ef547a",
+    "description": "AniKatsu - Official AniKatsu #1 Watch High Quality Anime Online Without Ads. You can watch anime online free in HD without Ads. Best place for free find and one-click anime."
+}
