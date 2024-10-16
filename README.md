@@ -33,7 +33,7 @@
 ## Screenshots Ddesktop 🖥 
 
 <p align="center">
- <img src="files/images/logo.png?v=0.1" alt="Logo" width="50%" height="50%">
+ <img src="files/images/Homepage.png?v=0.1" alt="Logo" width="50%" height="50%">
   <img src="" alt="files/images/Homepage.png?v=0.1" width="300" />
   <img src="" alt="files/images/player.png?v=0.1" width="300" />
 </p>
