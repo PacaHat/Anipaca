@@ -4,7 +4,7 @@ xen sama welcome 🤗
 <p align="center">
   <div align="center">
     <a href="https://anikatsu.me/">
-      <img src="https://anikatsu.me/files/images/logo.png?v=0.1" alt="Logo">
+      <img src="files/images/logo.png" alt="Logo">
     </a>
     <h3>(<a href="https://zoro.to">Zoro.to</a> Clone) AniKatsu - Watch High Quality Anime Online</h3>
     <a href="https://discord.gg/H96GCfBEPz">
