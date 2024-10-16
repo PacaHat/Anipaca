@@ -3,12 +3,18 @@ xen sama welcome 🤗
 
 <p align="center">
   <div align="center">
-    <a href="https://anikatsu.me/">
-    <img src="files/images/logo.png" alt="Logo" width="50%" height="50%">
-</a>
+    <a href="http://pgtl.byethost24.com/">
+      <img src="files/images/logo.png?v=0.1" alt="Logo" width="50%" height="50%">
+    </a>
+    <h3>(<a href="https://zoro.to">Zoro.to</a> Clone) AniKatsu - Watch High Quality Anime Online</h3>
+    <a href="https://discord.gg/qJAaMcH2">
+      <img src="https://img.shields.io/discord/1012901585896087652?label=discord&logo=discord&color=5460e6&style=flat-square&labelColor=2b2f35">
+    </a>
   </div>
 
-  <hr />bh
+  <hr />
+</p>
+
 
 #### NOTE:
 
