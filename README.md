@@ -33,9 +33,9 @@
 ## Screenshots Ddesktop 🖥 
 
 <p align="center">
-  <img src="" alt="files/images/landing page.png" width="300" />
-  <img src="" alt="files/images/Homepage.png" width="300" />
-  <img src="" alt="files/images/player.png" width="300" />
+  <img src="" alt="files/images/landing page.png?v=0.1" width="300" />
+  <img src="" alt="files/images/Homepage.png?v=0.1" width="300" />
+  <img src="" alt="files/images/player.png?v=0.1" width="300" />
 </p>
 <hr/>
 
@@ -59,7 +59,7 @@
 <br>
 --> **To Update Website Info (Website name, logo, favicon, socials url) Edit `_config.php` file**
 <br>
---> Recommended: First Clone the <a href="">API REPO</a>. Run It and Update the `$apiURL` variable in `_config.php` with new URL. 
+--> Recommended: First Clone the <a href="https://github.com/PacaHat/anime-api.git">API REPO</a>. Run It and Update the `$apiURL` variable in `_config.php` with new URL. 
 
 
 ## Online Deployment
@@ -70,7 +70,7 @@ Deploy on any PHP Apache hosting.
 
 First download the repository using
 ```
-git clone https://github.com/shashankktiwariii/anikatsu
+git clone https://github.com/PacaHat/Anipaca.git
 ```
 
 Now start the production build of the site
@@ -81,4 +81,4 @@ Start Apache Server (php environment) such as XAMPP, WAMP
 
 ## Sponsor this project
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/shashankk)
+
