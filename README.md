@@ -39,13 +39,11 @@
       <p><strong>Landing Page</strong></p>
       <img src="files/images/landing page.png?v=0.1" alt="Landing Page" style="width: 300px; height: auto;">
     </div>
-
-    <div>
+  <div>
       <p><strong>Homepage</strong></p>
       <img src="files/images/Homepage.png?v=0.1" alt="Homepage" style="width: 300px; height: auto;">
     </div>
-
-    <div>
+  <div>
       <p><strong>Player Screen</strong></p>
       <img src="files/images/player.png?v=0.1" alt="Player Screen" style="width: 300px; height: auto;">
     </div>
