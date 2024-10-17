@@ -30,7 +30,7 @@
   </a>
 </p>
 
-## Screenshots Ddesktop 🖥 
+## Screenshots
 <div style="text-align: center;">
   <p><strong>Landing Page, Homepage, and Player Screens</strong></p>
   
