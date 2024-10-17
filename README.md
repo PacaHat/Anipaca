@@ -18,6 +18,7 @@
 * This's an **Educational** Project.
 * I am **NOT** promoting the use of free anime websites by any means.
 * Open Source :)
+* And you can host it totally free ...(*￣０￣)ノ
 <p align="center">
   <h1 align="center">Anime Application</h1>
   Demo: <a href="http://pgtl.byethost24.com/">http://anipaca.com/</a> <br>
