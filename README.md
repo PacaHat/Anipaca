@@ -31,11 +31,12 @@
 </p>
 
 ## Screenshots Ddesktop 🖥 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="files/images/landing page.png?v=0.1" alt="Landing Page" style="width: 33%; margin: 10px;">
+  <img src="files/images/Homepage.png?v=0.1" alt="Homepage" style="width: 33%; margin: 10px;">
+  <img src="files/images/player.png?v=0.1" alt="Player" style="width: 33%; margin: 10px;">
+</div>
 
-<p align="center">
- <img src="files/images/landing page.png?v=0.1" alt="Logo" width="50%" height="50%">
-  <img src="files/images/Homepage.png?v=0.1" alt="Logo" width="50%" height="50%"> <img src="files/images/player.png?v=0.1" alt="Logo" width="50%" height="50%">
-</p>
 <hr/>
 
 ## Features 
