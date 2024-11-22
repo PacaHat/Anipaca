@@ -5852,3 +5852,4 @@ var jwDefaults = {
     "width": "100%",
 };
 jwplayer.defaults = jwDefaults;
+Explain
