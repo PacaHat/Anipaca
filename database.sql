@@ -103,3 +103,45 @@ ADD CONSTRAINT `fk_comments_user` FOREIGN KEY(`user_id`) REFERENCES `users`(`id`
 ALTER TABLE `comment_reactions`
 ADD CONSTRAINT `comment_reactions_ibfk_1` FOREIGN KEY(`comment_id`) REFERENCES `comments`(`id`) ON DELETE CASCADE,
 ADD CONSTRAINT `comment_reactions_ibfk_2` FOREIGN KEY(`user_id`) REFERENCES `users`(`id`) ON DELETE CASCADE;
+
+CREATE TABLE `pageview` (
+  `id` int(255) NOT NULL,
+  `pageID` varchar(250) NOT NULL,
+  `totalview` bigint(20) NOT NULL,
+  `like_count` int(11) NOT NULL,
+  `dislike_count` int(11) NOT NULL,
+  `animeID` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+--
+-- Dumping data for table `pageview`
+--
+
+INSERT INTO `pageview` (`id`, `pageID`, `totalview`, `like_count`, `dislike_count`, `animeID`) VALUES
+(1, 'a-stone-moving-quack-the-princess-wants-a-divorce-episode-1', 125, 14142, 419, 'a-stone-moving-quack-the-princess-wants-a-divorce');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `pageview`
+--
+ALTER TABLE `pageview`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `pageview`
+--
+ALTER TABLE `pageview`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16141;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
