@@ -269,45 +269,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             
                                 <!-- reCAPTCHA Field -->
                                 <div class="form-group">
-    <div class="col-sm-6" style="float:none;margin:auto;">
-        <div class="g-recaptcha" data-sitekey="<?= $google_recap_site_key ?>"></div>
-        <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" required>
-        <div id="recaptcha-error" style="color: red; display: none;">Please complete the reCAPTCHA.</div>
-    </div>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const recaptcha = document.querySelector('.g-recaptcha');
-        const hiddenInput = document.getElementById('g-recaptcha-response');
-        const recaptchaError = document.getElementById('recaptcha-error');
-        const form = recaptcha.closest('form'); // Find the parent form.
-
-        if (recaptcha) {
-            recaptcha.addEventListener('callback', function(response) {
-                hiddenInput.value = response;
-                recaptchaError.style.display = 'none'; // Hide error on success
-            });
-
-            recaptcha.addEventListener('expired-callback', function() {
-                hiddenInput.value = '';
-            });
-
-            recaptcha.addEventListener('error-callback', function() {
-                hiddenInput.value = '';
-            });
-
-            if (form) {
-                form.addEventListener('submit', function(event) {
-                    if (!hiddenInput.value) {
-                        event.preventDefault(); // Prevent form submission
-                        recaptchaError.style.display = 'block'; // Show error message
-                    }
-                });
-            }
-        }
-    });
-</script>
+                                    <div class="col-sm-6" style="float:none;margin:auto;">
+                                        <div class="g-recaptcha" data-sitekey="<?= $google_recap_site_key ?>"></div>
+                                    </div>
+                                </div>
                             
                                 <div class="mt-4">&nbsp;</div>
                             
