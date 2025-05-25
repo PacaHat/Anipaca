@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Share Test Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Share Test Page</h1>
+    
+    <div class="share-buttons-block">
+        <div class="share-icon"></div>
+        <div class="sbb-title mr-3">
+            <span>Share Test</span>
+            <p class="mb-0">to your friends</p>
+        </div>
+        <div class="sharethis-inline-share-buttons"></div>
+        <div class="clearfix"></div>
+    </div>
+
+    <!-- ShareThis integration with fallback -->
+    <script>
+        // Initialize ShareThis with error handling
+        window.sharethisInitialized = false;
+        function initShareThis() {
+            if (!window.sharethisInitialized) {
+                window.sharethisInitialized = true;
+                const script = document.createElement('script');
+                script.src = 'https://platform-api.sharethis.com/js/sharethis.js#property=67521dcc10699f0019237fbb&product=inline-share-buttons&source=platform';
+                script.async = true;
+                script.onerror = function() {
+                    console.log('ShareThis failed to load, initializing fallback...');
+                    const fallbackScript = document.createElement('script');
+                    fallbackScript.src = './src/assets/js/share-fallback.js';
+                    document.body.appendChild(fallbackScript);
+                };
+                document.body.appendChild(script);
+            }
+        }
+        // Initialize after a short delay
+        setTimeout(initShareThis, 1000);
+    </script>
+
+    <style>
+        .share-buttons-block {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .fallback-share-buttons {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .fallback-share-button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .fallback-share-facebook {
+            background-color: #3b5998;
+        }
+        .fallback-share-twitter {
+            background-color: #1da1f2;
+        }
+        .fallback-share-whatsapp {
+            background-color: #25d366;
+        }
+    </style>
+</body>
+</html>

@@ -120,7 +120,8 @@ cssFiles.forEach(file => {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67521dcc10699f0019237fbb&product=inline-share-buttons&source=platform" async="async"></script>
+    <!-- Enhanced ShareThis integration -->
+    <script src="<?=$websiteUrl?>/src/assets/js/share-enhanced.js"></script>
 
 <link rel="stylesheet" href="<?=$websiteUrl?>/src/assets/css/search.css">
 <script src="<?=$websiteUrl?>/src/assets/js/search.js"></script>
@@ -189,11 +190,11 @@ cssFiles.forEach(file => {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     </div>
     <?php
-      if(isset($message)){
-         foreach($message as $message){
-            echo '<script type="text/javascript">swal({title: "Error!",text: "Incorrect Email or Password!",icon: "warning",button: "Close",})</script>;';
-         }
-      }
+if(isset($message)){
+   foreach($message as $msg){
+      echo '<script type="text/javascript">swal({title: "Error!",text: "Incorrect Email or Password!",icon: "warning",button: "Close",})</script>;';
+   }
+}
       ?>
     <div style="display:none;">
     </div>

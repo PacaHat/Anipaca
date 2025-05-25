@@ -119,7 +119,8 @@ if(!empty($current_pass) || !empty($new_pass) || !empty($confirm_pass)){
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67521dcc10699f0019237fbb&product=inline-share-buttons&source=platform" async="async"></script>
+    <!-- Enhanced ShareThis integration -->
+    <script src="<?=$websiteUrl?>/src/assets/js/share-enhanced.js"></script>
 
     <link rel="stylesheet" href="<?=$websiteUrl?>/src/assets/css/search.css">
     <script src="<?=$websiteUrl?>/src/assets/js/search.js"></script>
@@ -263,7 +264,6 @@ if(!empty($current_pass) || !empty($new_pass) || !empty($confirm_pass)){
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js?v=1.5"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js?v=1.5"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-    <img src="https://anipaca.fun/yamete.php?domain=<?= urlencode($_SERVER['HTTP_HOST']) ?>&trackingId=UwU" style="width:0; height:0; visibility:hidden;">
    <!-- <script type="text/javascript" src="<?= $websiteUrl ?>/src/assets/js/comman.js"></script> -->
     <script type="text/javascript" src="<?= $websiteUrl ?>/src/assets/js/movie.js?v=1.5"></script>
     <link rel="stylesheet" href="<?= $websiteUrl ?>/src/assets/css/jquery-ui.css?v=1.5">
@@ -274,15 +274,15 @@ if(!empty($current_pass) || !empty($new_pass) || !empty($confirm_pass)){
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js?v=<?=$version?>"></script>
     <?php
       if(isset($message)){
-         foreach($message as $message){
-            echo '<script type="text/javascript">swal({title: "Error!",text: "'.$message.'",icon: "warning",button: "Close",})</script>;';
+         foreach($message as $msg){
+            echo '<script type="text/javascript">swal({title: "Error!",text: "'.$msg.'",icon: "warning",button: "Close",})</script>;';
          }
       }
       ?>
       <?php
       if(isset($message2)){
-         foreach($message2 as $message2){
-            echo '<script type="text/javascript">swal({title: "Success!",text: "'.$message2.'",icon: "success",button: "Close",})</script>;';
+         foreach($message2 as $msg2){
+            echo '<script type="text/javascript">swal({title: "Success!",text: "'.$msg2.'",icon: "success",button: "Close",})</script>;';
          }
       }
       ?>

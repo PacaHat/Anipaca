@@ -5,10 +5,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
 <html lang="en">
 
 <head>
-    <title>
-        <?= $websiteTitle ?> - Official
-        #Watch High Quality Anime Online Without Ads
-    </title>
+    <title>Watch Anime Online, Free Anime Streaming Online on <?= $websiteTitle ?> Anime Website</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="robots" content="index,follow" />
@@ -41,13 +38,12 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
     <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67521dcc10699f0019237fbb&product=inline-share-buttons&source=platform" async="async"></script>
-
+    <!-- Enhanced ShareThis integration -->
+    <script src="<?=$websiteUrl?>/src/assets/js/share-enhanced.js"></script>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67521dcc10699f0019237fbb&product=inline-share-buttons&source=platform" async="async"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R34F2GCSBW"></script>
 <script>
@@ -107,7 +103,6 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
 
 <script type="text/javascript"
         src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js?v=<?= $version ?>"></script>
-        <img src="https://anipaca.fun/yamete.php?domain=<?= urlencode($_SERVER['HTTP_HOST']) ?>&trackingId=UwU" style="width:0; visibility:hidden;">
     <script type="text/javascript"
         src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js?v=<?= $version ?>"></script>
     <script>

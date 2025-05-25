@@ -2,11 +2,18 @@
 // Include the global configuration file
 require_once($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
 
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//error_reporting(E_ALL);
 
-// Get the URI without query strings
-$uri = strtok(trim($_SERVER['REQUEST_URI'], '/'), '?');
+// Serve static files directly if they exist
+$uri = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+$requestedFile = $_SERVER['DOCUMENT_ROOT'] . $uri;
+if ($uri !== '/' && file_exists($requestedFile) && !is_dir($requestedFile)) {
+    return false; // Serve the requested resource as-is.
+}
+
+// Get the URI without query strings and leading/trailing slashes
+$uri = trim($uri, '/');
 
 // Define routes with regex patterns and associated files
 $routes = [
@@ -38,22 +45,19 @@ $routes = [
   '/^changepass$/' => 'src/user/changepass.php',
   '/^continue-watching$/' => 'src/user/continue-watching.php',
 
-
   // Extra Pages
   '/^dmca$/' => 'src/pages/extra/dmca.php',
   '/^terms$/' => 'src/pages/extra/terms.php',
 
-    // Sitemap Routes
-    '/^sitemaps\/popular\.xml$/' => 'public/sitemap/sitemappopular.xml',
-    '/^sitemaps\/movie\.xml$/' => 'public/sitemap/sitemapmovie.xml',
-    '/^sitemaps\/airing\.xml$/' => 'public/sitemap/sitemapairing.xml',
-    '/^sitemaps\/ongoing-sitemap\.xml$/' => 'public/sitemap/sitemapongoing.xml',
-    '/^sitemaps\/allanime-sitemap\.xml$/' => 'public/sitemap/sitemapallanime.xml',
-    '/^sitemaps\/sitemap\.xml$/' => 'public/sitemap/sitemap.php',
-    '/^sitemap\.xml$/' => 'public/sitemap/sitemap.php',
+  // Sitemap Routes
+  '/^sitemaps\/popular\.xml$/' => 'public/sitemap/sitemappopular.xml',
+  '/^sitemaps\/movie\.xml$/' => 'public/sitemap/sitemapmovie.xml',
+  '/^sitemaps\/airing\.xml$/' => 'public/sitemap/sitemapairing.xml',
+  '/^sitemaps\/ongoing-sitemap\.xml$/' => 'public/sitemap/sitemapongoing.xml',
+  '/^sitemaps\/allanime-sitemap\.xml$/' => 'public/sitemap/sitemapallanime.xml',
+  '/^sitemaps\/sitemap\.xml$/' => 'public/sitemap/sitemap.php',
+  '/^sitemap\.xml$/' => 'public/sitemap/sitemap.php',
 ];
-
-
 
 // Route matching
 $handled = false;

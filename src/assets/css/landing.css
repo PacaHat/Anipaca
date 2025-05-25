@@ -4,7 +4,7 @@ html {
     position: relative;
 }
 body {
-    background: rgb(32, 31, 49);
+    background: rgb(36,36,40);
     font-family: "Poppins", Arial;
     color: #ccc;
     font-size: 14px;
@@ -20,7 +20,7 @@ a {
     color: #aaa;
 }
 a:hover {
-    color: #ffbade;
+    color: #ffdd95;
     text-decoration: none;
 }
 button,
@@ -35,7 +35,7 @@ button,
 }
 .btn-highlight {
     font-weight: 600;
-    color: #ffbade;
+    color: #ffdd95;
     font-size: 1.2em;
     position: relative;
     padding-left: 50px;
@@ -55,6 +55,53 @@ button,
 .container {
     max-width: 1200px !important;
     width: 100% !important;
+}
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 992px) {
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 960px;
+    }
+}
+@media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+        max-width: 720px;
+    }
+}
+@media (min-width: 576px) {
+    .container, .container-sm {
+        max-width: 540px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 #xwrapper {
     width: 100%;
@@ -81,7 +128,7 @@ button,
     line-height: 40px;
     font-size: 20px;
     font-weight: 600;
-    color: #ffbade !important;
+    color: #ffdd95 !important;
 }
 #xheader_menu {
     width: 100%;
@@ -114,7 +161,7 @@ button,
     letter-spacing: 1px;
 }
 #xheader_menu ul.header_menu-list .nav-item > a:hover {
-    color: #ffbade;
+    color: #ffdd95;
 }
 #xheader_browser {
     float: left;
@@ -133,7 +180,7 @@ button,
     color: #fff;
 }
 #xheader_browser.active .header-btn {
-    color: #ffbade;
+    color: #ffdd95;
 }
 /* footer */
 #xfooter-about {
@@ -154,43 +201,38 @@ button,
 /* page */
 #mw-top {
     padding: 0;
-    margin: 0 0 40px 0;
+    margin: 0;
     position: relative;
     z-index: 3;
+    background-color: rgba(255, 255, 255, .1);
 }
-#mw-top .mwt-content {
-    position: relative;
-    padding: 80px;
-    margin: 0 -80px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 40px;
-}
-#mw-top .mwt-content .mwt-icon {
-    position: absolute;
-    top: 0;
-    right: 0px;
-    bottom: 0;
-    width: 650px;
-    border-radius: 0 40px 40px 0;
-    overflow: hidden;
-}
-#mw-top .mwt-content .mwt-icon::before {
+#mw-top:before {
     content: "";
-    z-index: 3;
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
     bottom: 0;
-    width: 400px;
-    background: rgb(43, 42, 60);
-    background: linear-gradient(90deg, rgba(43, 42, 60, 1) 0%, rgba(43, 42, 60, 0) 100%);
+    background: rgb(36, 36, 40);
+    background: -moz-linear-gradient(180deg, rgba(36,36,40,1) 0%, rgba(36,36,40,0) 64%);
+    background: -webkit-linear-gradient(180deg, rgba(36, 36, 40, 1) 0%, rgba(36, 36, 40, 0) 64%);
+    background: linear-gradient(180deg, rgba(36, 36, 40, 1) 0%, rgba(36, 36, 40, 0) 64%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2B2B2B",endColorstr="#2B2B2B",GradientType=1);
+}
+#mw-top .mwt-content {
+    padding: 100px 0 100px;
+    padding-right: 550px;
+    position: relative;
+}
+#mw-top .mwt-content .mwt-icon {
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    width: 600px;
 }
 #mw-top .mwt-content .mwt-icon img {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-    opacity: 0.5;
+    height: auto;
 }
 #mw-top .mwh-logo {
     margin-bottom: 30px;
@@ -199,7 +241,7 @@ button,
     display: inline-block;
 }
 #mw-top .mwh-logo .mwh-logo-div img {
-    height: 40px;
+    height: 60px;
     width: auto;
 }
 .mw-heading {
@@ -213,7 +255,7 @@ button,
     font-size: 28px;
     font-weight: 700;
     text-align: center;
-    color: #ffbade;
+    color: #ffdd95;
     margin: 0 0 10px 0;
 }
 #mw-top .mw-heading-second {
@@ -228,7 +270,7 @@ button,
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #ffbade;
+    background: #ffdd95;
     left: 0;
     position: absolute;
     top: 8px;
@@ -247,8 +289,6 @@ button,
     text-overflow: ellipsis;
     white-space: nowrap;
     float: left;
-    color: #fff;
-    cursor: pointer;
 }
 .xhashtag .item:after {
     content: ",";
@@ -257,22 +297,23 @@ button,
     content: ", ...";
 }
 #action-button {
-    margin: 40px 0 0;
+    margin-bottom: 50px;
+    background: #ffdd95;
+    border-radius: 0 0 30px 30px;
 }
 #action-button .btn {
     display: block;
-    border-radius: 12px;
+    border-radius: 0;
     padding: 15px 20px;
     font-weight: 600;
-    background: #ffbade !important;
+    background: none !important;
     color: #111 !important;
     border: none !important;
     box-shadow: none !important;
-    max-width: 260px;
 }
 #xsearch.home-search {
     display: block !important;
-    margin: 0;
+    margin: 10px 0;
     padding: 0 !important;
     width: 100%;
     background: none !important;
@@ -281,17 +322,35 @@ button,
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
-    max-width: 500px;
-    z-index: 3;
+}
+#xsearch.home-search .search-content {
+    position: relative;
+    padding-right: 60px;
+    margin-bottom: 30px;
 }
 #xsearch.home-search .search-input {
     height: 50px;
     font-weight: 400;
-    border-radius: 12px;
+    border-radius: 30px;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 16px;
     border: none !important;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 #xsearch.home-search .search-content .search-submit {
     height: 50px;
@@ -303,8 +362,8 @@ button,
     cursor: pointer;
     display: inline-block;
     width: 50px;
-    background: #ffbade;
-    border-radius: 12px;
+    background: #ffdd95;
+    border-radius: 30px;
 }
 #xsearch.home-search .search-content .search-submit .search-icon i {
     color: #111;
@@ -318,7 +377,7 @@ button,
 }
 .mw-buttons .btn-primary {
     font-weight: 600;
-    background: #ffbade !important;
+    background: #ffdd95 !important;
     color: #111 !important;
     padding: 15px 30px;
     transition: all 0.2s ease 0s;
@@ -389,7 +448,7 @@ button,
     color: #fff;
 }
 .zr-news .item .zrn-title:hover {
-    color: #ffbade;
+    color: #ffdd95;
 }
 .zr-news .item .zrn-title .news-title {
     font-size: 16px;
@@ -488,9 +547,11 @@ button,
     display: inline-block;
     width: 100%;
     margin-bottom: 30px;
+    background-color: #121315;
+    border-radius: 10px;
 }
 .share-buttons .share-buttons-block {
-    padding: 0;
+    padding: 15px;
     position: relative;
 }
 .share-buttons .share-buttons-block .share-icon {
@@ -500,13 +561,15 @@ button,
     display: block;
     font-size: 12px;
     float: left;
+    padding: 2px 0 2px 20px;
+    border-left: 2px solid #ffdd95;
     margin-right: 20px;
     position: relative;
 }
 .share-buttons .share-buttons-block .sbb-title span {
     font-weight: 600;
     font-size: 14px;
-    color: #ffbade;
+    color: #ffdd95;
 }
 .share-buttons .share-buttons-block .sbb-social {
     float: left;
@@ -576,7 +639,7 @@ button,
         font-size: 16px;
     }
     #xheader_menu ul.header_menu-list .nav-item > a:hover {
-        color: #ffbade;
+        color: #ffdd95;
     }
     #xheader_menu.active {
         display: block !important;
@@ -588,9 +651,6 @@ button,
     .heading-news {
         font-size: 20px;
         margin-bottom: 20px;
-    }
-    #action-button {
-        margin-top: 30px;
     }
     #xsearch.home-search .search-content .search-submit .search-icon i {
         font-size: 16px;
@@ -811,7 +871,7 @@ body.xmas-ui .mw-keywords .mwk-item {
     color: #5eadb5;
 }
 body.xmas-ui .mw-keywords .mwk-item:hover {
-    color: #ffbade;
+    color: #ffdd95;
 }
 body.xmas-ui #mw-top {
     background: rgb(34, 95, 98);

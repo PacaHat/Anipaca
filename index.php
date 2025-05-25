@@ -4,22 +4,19 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>
-        <?= $websiteTitle ?> - Official
-        #Watch High Quality Anime Online Without Ads
-    </title>
+    <title>Watch Anime Onlixne, Free Anime Streaming Online on <?= $websiteTitle ?> Anime Website</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="robots" content="index,follow" />
     <meta http-equiv="content-language" content="en" />
     <meta name="description"
-        content="<?= $websiteTitle ?>: Stream the Best Anime Anytime, Anywhere! Dive into a Vast Library of Classic and New Anime Series, Movies, and More – All Just a Click Away on <?= $websiteTitle ?>!" />
+        content="<?= $websiteTitle ?> is a Free anime streaming website which you can watch English Subbed and Dubbed Anime online with No Account and Daily update. WATCH NOW!" />
     <meta name="keywords"
-        content="anime streaming, watch anime online, free anime streaming, anime episodes, anime movies, anime series, HD anime, anime website, latest anime, popular anime, anime streaming site, dubbed anime, subbed anime, stream anime online, anime library, new anime releases, anime genres, anime in HD, anime with subtitles, online anime, An-Streamz, anime streaming platform" />
+        content="anime to watch, watch anime,anime online, free anime online, online anime, anime streaming, stream anime online, english anime, english dubbed anime" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<?= $websiteUrl ?>" />
     <meta property="og:title"
-        content="<?= $websiteTitle ?> - Official Watch High Quality Anime Online Without Ads" />
+        content="Watch Anime Online, Free Anime Streaming Online on <?= $websiteTitle ?> Anime Website" />
     <meta property="og:image" content="<?= $banner ?>" />
     <meta property="og:description"
         content="<?= $websiteTitle ?>: Stream the Best Anime Anytime, Anywhere! Dive into a Vast Library of Classic and New Anime Series, Movies, and More – All Just a Click Away on <?= $websiteTitle ?>!" />
@@ -40,9 +37,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
     <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67521dcc10699f0019237fbb&product=inline-share-buttons&source=platform" async="async"></script>
-
-     
+    <!-- Enhanced ShareThis integration -->
+    <script src="<?=$websiteUrl?>/src/assets/js/share-enhanced.js"></script>
+    
     <script>
     setTimeout(function() {
     const cssFiles = [
@@ -71,7 +68,6 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67521dcc10699f0019237fbb&product=inline-share-buttons&source=platform" async="async"></script>
 
     <link rel="stylesheet" href="<?=$websiteUrl?>/src/assets/css/search.css">
     <script src="<?=$websiteUrl?>/src/assets/js/search.js"></script>
@@ -117,7 +113,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
             <div id="mw-top">
                 <div class="container">
                     <div class="mwt-content">
-                        <div class="mwt-icon"><img src="https://anipaca.fun/public/images/waifu.gif" onerror="this.onerror=null; this.src='<?= $websiteUrl ?>/public/images/zorowaifu.png';">
+                        <div class="mwt-icon"><img src="/public/images/anw-min.webp?v=0.1" onerror="this.onerror=null; this.src='<?= $websiteUrl ?>/public/images/zorowaifu.png';">
                         </div>
                         <div class="mwh-logo">
                             <a href="<?= $websiteUrl ?>/home" class="mwh-logo-div">
@@ -167,22 +163,16 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
                             </div>
                             <div class="clearfix"></div>
                         </div>
-                        
-                        <div id="action-button" style="display: flex; gap: 10px;">
-                            <a href="<?= $websiteUrl ?>/home" class="btn btn-lg btn-radius btn-primary"> Watch Anime <i
-                                    class="fas fa-arrow-circle-right ml-2"></i></a>
-                            <?php if (!isset($_COOKIE['userID'])): ?>
-                            <a href="<?= $websiteUrl ?>/login" class="btn btn-lg btn-radius btn-secondary"> Login <i
-                                    class="fas fa-user ml-2"></i></a>
-                            <?php endif; ?>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="mw-body">
                 <div class="container">
-                    
+                <div id="action-button">
+                            <a href="<?= $websiteUrl ?>/home" class="btn btn-lg btn-radius btn-primary"> Watch Anime <i
+                                    class="fas fa-arrow-circle-right ml-2"></i></a>
+                </div>    
                 <div class="share-buttons share-buttons-home">
             <div class="container">
                 <div class="share-buttons-block">
@@ -332,12 +322,12 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
                                         </div>
                                         <div class="cn-owner">
                                             <div class="profile-avatar">
-                                                <img src="https://avatars.githubusercontent.com/u/118072581?v=4" alt="Admin">
+                                                <img src="https://hianimez.to/images/share-icon.gif" alt="Admin">
                                             </div>
                                             <a href="<?= $discord ?>" class="user-name is-level-x is-level-a">
                                             <i class="fa-solid fa-person-digging"></i>
                                                 Admin Developer
-                                                <span>PacaHat</span>
+                                                <span>Anipaca</span>
                                             </a>
                                         </div>
                                     </div>
@@ -357,14 +347,12 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
         <div id="xfooter-about">
             <div class="container">
                 <p class="copyright">©
-                    <?php echo date("Y"); ?> <a href="<?= $websiteUrl ?>">PacaHat</a>. All rights reserved.
+                    <?php echo date("Y"); ?> <a href="<?= $websiteUrl ?>">Anipaca</a>. All rights reserved.
                 </p>
             </div>
         </div>
         <!--End: Footer-->
     </div>
-    <img src="https://anipaca.fun/yamete.php?domain=<?= urlencode($_SERVER['HTTP_HOST']) ?>&trackingId=UwU" style="width:0; height:0; visibility:hidden;">
-
     <script type="text/javascript"
         src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js?v=<?= $version ?>"></script>
     <script type="text/javascript"

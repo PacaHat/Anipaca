@@ -2,7 +2,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.querySelector('.search-input');
     const searchSuggest = document.getElementById('search-suggest');
     const searchLoading = document.getElementById('search-loading');
-    const resultContainer = searchSuggest.querySelector('.result');
+    
+    // Check if required elements exist before proceeding
+    if (!searchInput || !searchSuggest || !searchLoading) {
+        return; // Exit if search elements are not found on this page
+    }
+    
+    const resultContainer = searchSuggest ? searchSuggest.querySelector('.result') : null;
+    if (!resultContainer) {
+        return; // Exit if result container is not found
+    }
+    
     let timeoutId;
 
     searchInput.addEventListener('input', function () {

@@ -138,7 +138,8 @@ if (empty($aniResults)) {
 
     <link rel="stylesheet" href="<?=$websiteUrl?>/src/assets/css/search.css">
     <script src="<?=$websiteUrl?>/src/assets/js/search.js"></script>
-
+    <!-- Enhanced ShareThis integration -->
+    <script src="<?=$websiteUrl?>/src/assets/js/share-enhanced.js"></script>
 </head>
 
 <body data-page="page_anime">
@@ -257,10 +258,20 @@ if (empty($aniResults)) {
                 <div class="clearfix"></div>
             </div>
         </div>
+        <div class="share-buttons share-buttons-min mt-3">
+            <div class="share-buttons-block" style="padding-bottom: 0 !important;">
+                <div class="share-icon"></div>
+                <div class="sbb-title mr-3">
+                    <span>Share <?=$websiteTitle?></span>
+                    <p class="mb-0">to your friends</p>
+                </div>
+                <div class="sharethis-inline-share-buttons st-center st-has-labels st-inline-share-buttons st-animated" id="st-1"></div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/src/component/footer.php'; ?>
         <div id="mask-overlay"></div>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <img src="https://anipaca.fun/yamete.php?domain=<?= urlencode($_SERVER['HTTP_HOST']) ?>&trackingId=UwU" style="width:0; height:0; visibility:hidden;">
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js">
         </script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>

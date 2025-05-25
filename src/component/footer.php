@@ -65,10 +65,9 @@
                 </ul>
                 <div class="clearfix"></div>
             </div>
-            <img src="https://anipaca.fun/yamete.php?domain=<?= urlencode($_SERVER['HTTP_HOST']) ?>&trackingId=UwU" style="width:0; height:0; visibility:hidden;">
             <div class="about-text"><?=$websiteTitle?> does not store any files on our server, we only share link to the
                 media which is hosted on 3rd party services.</div>
-            <p class="copyright">Copyright © <?=date("Y")?> PacaHat. All Rights Reserved</p>
+            <p class="copyright">Copyright © <?=date("Y")?> PigiNime. All Rights Reserved</p>
         </div>
     </div>
 </div>

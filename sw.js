@@ -1,32 +1,61 @@
 // Define a cache name
 const CACHE_NAME = 'anime-site-cache-v1';
 
-// List of URLs to cache
-const urlsToCache = [
-    '/',
-    '/index.php',
-    '/src/assets/css/home.css',
-    'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css',
-    'https://use.fontawesome.com/releases/v5.3.1/css/all.css',
-    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css',
-    'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
-    'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js',
-    // Add more assets as needed
+// ShareThis domains to bypass
+const BYPASS_DOMAINS = [
+    'platform-api.sharethis.com',
+    'l.sharethis.com',
+    'buttons-config.sharethis.com'
 ];
 
-// Install event - caching the assets
+// List of URLs to cache - updated with existing project files
+const urlsToCache = [
+    '/index.php',
+    '/home.php',
+    '/search.php',
+    '/src/assets/css/styles.min.css',
+    '/src/assets/css/bootstrap.min.css',
+    '/src/assets/css/search.css',
+    '/src/assets/js/app.min.js',
+    '/src/assets/js/search.js',
+    '/src/assets/js/function.js',
+    '/public/logo/favicon.png',
+    '/public/logo/logo.png',
+    '/public/logo/favicon.ico'  // Added favicon
+];
+
+// Install event - caching the assets with error handling
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => {
-                console.log('Opened cache');
-                return cache.addAll(urlsToCache);
+                console.log('Cache opened successfully');
+                // Cache files individually to handle failures gracefully
+                return Promise.all(
+                    urlsToCache.map(url => {
+                        return cache.add(url).catch(error => {
+                            console.error('Failed to cache:', url, error);
+                            // Continue caching other files even if one fails
+                            return Promise.resolve();
+                        });
+                    })
+                );
+            })
+            .catch(error => {
+                console.error('Service Worker installation failed:', error);
             })
     );
 });
 
-// Fetch event - serving cached content when offline
+// Fetch event - serving cached content when offline with improved error handling
 self.addEventListener('fetch', event => {
+    // Check if the request is for ShareThis domains
+    const url = new URL(event.request.url);
+    if (BYPASS_DOMAINS.some(domain => url.hostname.includes(domain))) {
+        // Don't interfere with ShareThis requests
+        return;
+    }
+
     event.respondWith(
         caches.match(event.request)
             .then(response => {
@@ -34,7 +63,36 @@ self.addEventListener('fetch', event => {
                 if (response) {
                     return response;
                 }
-                return fetch(event.request);
+
+                // Clone the request because it can only be used once
+                const fetchRequest = event.request.clone();
+
+                return fetch(fetchRequest).then(response => {
+                    // Check if we received a valid response
+                    if (!response || response.status !== 200 || response.type !== 'basic') {
+                        return response;
+                    }
+
+                    // Clone the response because it can only be used once
+                    const responseToCache = response.clone();
+
+caches.open(CACHE_NAME)
+    .then(cache => {
+        // Only cache successful GET responses
+        if (event.request.method === 'GET' && response.status === 200) {
+            cache.put(event.request, responseToCache);
+        }
+    });
+
+                    return response;
+                }).catch(() => {
+                    // Return a custom offline page or fallback content
+                    if (event.request.headers.get('accept').includes('text/html')) {
+                        return caches.match('/offline.html');
+                    }
+                    // For other resources, return a simple error response
+                    return new Response('Offline content not available');
+                });
             })
     );
 });
@@ -47,6 +105,7 @@ self.addEventListener('activate', event => {
             return Promise.all(
                 cacheNames.map(cacheName => {
                     if (cacheWhitelist.indexOf(cacheName) === -1) {
+                        console.log('Deleting old cache:', cacheName);
                         return caches.delete(cacheName);
                     }
                 })

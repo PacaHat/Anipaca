@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Worker Test</title>
+</head>
+<body>
+    <h1>Service Worker Test Page</h1>
+    <div id="status">Checking service worker registration...</div>
+
+    <script>
+        // Check if service worker is supported
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                        document.getElementById('status').textContent = 'Service Worker registered successfully!';
+                    })
+                    .catch(function(err) {
+                        console.log('ServiceWorker registration failed: ', err);
+                        document.getElementById('status').textContent = 'Service Worker registration failed: ' + err.message;
+                    });
+            });
+        } else {
+            document.getElementById('status').textContent = 'Service Workers are not supported';
+        }
+    </script>
+</body>
+</html>
