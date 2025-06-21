@@ -121,6 +121,7 @@ $characterDataJson = json_encode($characterData, JSON_PRETTY_PRINT);
     <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css>
     <link rel=stylesheet href=https://use.fontawesome.com/releases/v5.3.1/css/all.css>
     <link rel=stylesheet href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67521dcc10699f0019237fbb&product=inline-share-buttons&source=platform" async="async"></script>
 </head>
 
 <body data-page="movie_info">

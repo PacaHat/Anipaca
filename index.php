@@ -39,7 +39,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/_config.php');
     <link rel="stylesheet" href="<?= $websiteUrl ?>/src/assets/css/landing.css?v=<?= $version ?>">
     <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <link rel="stylesheet" href="<?= $websiteUrl ?>/src/assets/css/styles.min.css?v=<?= $version ?>">
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=67521dcc10699f0019237fbb&product=inline-share-buttons&source=platform" async="async"></script>
 
      
